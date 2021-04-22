@@ -42,17 +42,14 @@
 
 <div id = "header" class="container-fluid">
 	<p>
-	TODO: Create Decent POS pls
-	</p>	
-	<p>
-	TODO: Ur Previous Subsystem doesnt even work
+	TODO: Create a Decent POS pls
 	</p>	
 </div>
 
 <div id ="div-summary" class ="container-fluid">
 
 	<p>
-	PRODUCT SUMMARY GOES HERE
+	PURCHASE SUMMARY GOES HERE
 	</p>
 
 	<p>
@@ -65,9 +62,6 @@
 
 <div id ="div-product" class ="container-fluid">
 
-	<p>
-	DEV NOTES
-	</p>
 	<p>
 	TODO: Functions to organize this buttons by category
 	</p>

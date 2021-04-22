@@ -13,10 +13,13 @@
 	This should be a dashboard that show important data regarding your subsystem
 	</p>
 	<p>
-	For POS kelangan i-show amount currently held, most sold, amounts of sales, atbp. . .to be discussed  
+	For POS kelangan i-show amount currently held, most sold, amounts of sales, atbp. .
 	</p>
 	<p>
-	This should be the most graphic subsystem dapat, more effort pls . . . . :)
+	This should be the most user-centered subsystem, more effort pls . . . . :)
+	</p>	
+	<p>
+	Mayroon nang Charts.js call nyo na lang functions for graphs
 	</p>
 </div>
 <script>

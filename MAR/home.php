@@ -2,10 +2,24 @@
   
 </style>
 
+<div id = "header" class="container-fluid">
+	<p>
+	DEV NOTES
+	</p>	
+	<p>
+	TODO: Implement JSON and XML functions to modify Website Content
+	</p>
+</div>
+
 <div class="container-fluid">
-This should be a dashboard that show important data regarding your subsystem
+
+<iframe src="./MAR/MAR-website/index.html" style="width: 1000px; height: 500px;"></iframe>
 	
 </div>
+
+
+
+
 <script>
 	
 </script>
