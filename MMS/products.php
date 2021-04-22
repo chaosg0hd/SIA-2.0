@@ -119,9 +119,7 @@ $('.btn-items').click(function() {
 	var content = $(this).attr('var_content');	
 	content = content.replace(/}{/g, ' & ');
 	content = content.replace(/[{()}]/g, ' ');
-
-
-	
+		
 	document.getElementById('p-content').innerHTML = content;
 });
 	

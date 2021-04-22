@@ -29,7 +29,7 @@
 	display: flex;
 }
 .btn {
-    height: 20%;
+    height: 18%;
     width: 20%;
     min-height: 140px;
     min-width: 140px;
@@ -132,6 +132,8 @@
 #button-adm{         
     color: var(--white) !important;
     background: var(--red) !important;  
+    align-items: center; 
+    clip-path: polygon(100% 100%, 50% 70%, 0 100%, 0 30%, 50% 0, 100% 30%);
 }
 #button-adm:hover{     
     background-size: 100px 100px !important;  

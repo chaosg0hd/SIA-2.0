@@ -35,9 +35,33 @@
 	</p>
 	<p>
 	Try to adopt JSON
-	</p>
-	
+	</p>	
+	<p>
+			
+	<p>
 </div>
-<script>
-	
-</script>
+
+<?php
+
+$.ajax({
+		url:'ajax.php?action=login',
+		method:'POST',
+		data:$(this).serialize(),
+		error:err=>{
+			console.log(err)
+		$('#login-form button[type="button"]').removeAttr('disabled').html('Login');
+
+			},
+			success:function(resp){
+				if(resp == 1){
+					location.href ='landing.php?page=home';
+				}else if(resp == 2){
+					location.href ='voting.php';
+				}else{
+					$('#login-form').prepend('<div class="alert alert-danger">Username or password is incorrect.</div>')
+					$('#login-form button[type="button"]').removeAttr('disabled').html('Login');
+				}
+			}
+		})
+
+?>

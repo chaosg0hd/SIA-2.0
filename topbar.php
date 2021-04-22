@@ -173,16 +173,37 @@
       
             <div id ="div-topbar-row-2">
                 <div id ="div-topbar-btn-box">
-                    <a href="./index.php?sys=CMS&page=home"><button type="button" id ="btn-topbar-CMS" class ="btn-topbar">Costumer Management</button></a>
-                    <a href="./index.php?sys=POS&page=home"><button type="button" id ="btn-topbar-POS" class ="btn-topbar">Point of Sale</button></a>
-                    <a href="./index.php?sys=MMS&page=home"><button type="button" id ="btn-topbar-MMS" class ="btn-topbar">Menu Management</button></a>
-                    <a href="./index.php?sys=IMS&page=home"><button type="button" id ="btn-topbar-IMS" class ="btn-topbar">Inventory Management</button></a>
-                    <a href="./index.php?sys=DTR&page=home"><button type="button" id ="btn-topbar-DTR" class ="btn-topbar">Daily Time Record</button></a>
-                    <a href="./index.php?sys=PMS&page=home"><button type="button" id ="btn-topbar-PMS" class ="btn-topbar">Payroll Management</button></a>
-                    <a href="./index.php?sys=MAR&page=home"><button type="button" id ="btn-topbar-MAR" class ="btn-topbar">Marketing Management</button></a>                    
-                    <a href="./index.php?sys=FMS&page=home"><button type="button" id ="btn-topbar-FMS" class ="btn-topbar">Finance Management</button></a>  
+                    <?php if($_SESSION['Access_'] == 1 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=CMS&page=home"><button type="button" id ="btn-topbar-CMS" class ="btn-topbar">Costumer Management</button></a>
+                    <?php endif; ?>
+                    <?php if($_SESSION['Access_'] == 2 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=POS&page=home"><button type="button" id ="btn-topbar-POS" class ="btn-topbar">Point of Sale</button></a>
+                    <?php endif; ?>
+                    <?php if($_SESSION['Access_'] == 3 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=MMS&page=home"><button type="button" id ="btn-topbar-MMS" class ="btn-topbar">Menu Management</button></a>
+                    <?php endif; ?>
+                    <?php if($_SESSION['Access_'] == 4 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=IMS&page=home"><button type="button" id ="btn-topbar-IMS" class ="btn-topbar">Inventory Management</button></a>
+                    <?php endif; ?>
+                    <?php if($_SESSION['Access_'] == 5 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=DTR&page=home"><button type="button" id ="btn-topbar-DTR" class ="btn-topbar">Daily Time Record</button></a>
+                    <?php endif; ?>
+                    <?php if($_SESSION['Access_'] == 6 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=PMS&page=home"><button type="button" id ="btn-topbar-PMS" class ="btn-topbar">Payroll Management</button></a>
+                    <?php endif; ?>
+                    <?php if($_SESSION['Access_'] == 7 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=MAR&page=home"><button type="button" id ="btn-topbar-MAR" class ="btn-topbar">Marketing Management</button></a> 
+                    <?php endif; ?>
+                    <?php if($_SESSION['Access_'] == 8 or $_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=FMS&page=home"><button type="button" id ="btn-topbar-FMS" class ="btn-topbar">Finance Management</button></a>  
+                    <?php endif; ?>
+                    
                     <a href="./landing.php"><button type="button" id ="btn-nav" class ="btn-topbar btn-primary">Navigation</button></a> 
-                    <a href="./index.php?sys=admin&page=home"><button type="button" id ="btn-nav" class ="btn-topbar btn-primary">Admin Tools</button></a> 
+                    
+                    <?php if($_SESSION['Access_'] == 0): ?>
+                        <a href="./index.php?sys=admin&page=home"><button type="button" id ="btn-nav" class ="btn-topbar btn-primary">Admin Tools</button></a> 
+                    <?php endif; ?>
+
                 </div>
             </div>
         </div>        
