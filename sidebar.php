@@ -31,7 +31,7 @@
 	font-size: 20px;
 }
 .nav-item-active, .nav-item-active:active, .nav-item-active:hover{
-	width: 120%;	
+	width: 125%;	
 	color: var(--white) !important;
 	clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
     background-image: linear-gradient(to right, rgba(0, 0, 0, .4), rgb(0, 0, 0, 1));
