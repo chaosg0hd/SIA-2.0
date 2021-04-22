@@ -1,13 +1,19 @@
 <style>
   
 </style>
-
-<div id ="header" class="container-fluid">
-This should be a dashboard that show important data regarding your subsystem	
+<div id = "header" class="container-fluid">
+	<p>
+	DEV NOTES
+	</p>	
 </div>
 
 <div id ="header" class="container-fluid">
-TODO: Menu Management System must show Hot Items, amount of times an item has been prepared, must be able to create items, and show its content	
+<p>
+This should be a dashboard that show important data regarding your subsystem	
+</p>
+<p>
+TODO: Menu Management System must show most produced Items, must be able to create items, and show its contents	
+</p>
 </div>
 
 <script>

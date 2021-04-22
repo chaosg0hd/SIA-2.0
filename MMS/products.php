@@ -48,10 +48,10 @@
 
 <div id = "header" class="container-fluid">
 	<p>
-	TODO: To Show Menu Item
+	TODO: To show menu item
 	<p>
 	</p>
-	TODO: To Show Product as Contents
+	TODO: To show product and its contents
 	</p>	
 </div>
 
@@ -63,6 +63,10 @@
 
 	<p>
 	TODO: To show what a menu item contains 
+	</p>
+
+	<p>
+	TODO: Buttons to modify product datas
 	</p>
 
 	<div id ="div-content_field">

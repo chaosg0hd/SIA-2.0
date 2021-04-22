@@ -13,7 +13,7 @@
 	BENEDICT UNG SQL INJECTOR NA PINAPAGAWA KO
 	</p>
 	<p>
-	For now per page muna ilagay queries at conn, later na lang iorganize, idk kung bkt kelangan mag ajax
+	For now ok lang siguro kahit per page mismo ipasok mga sql queries, if may makagawa ng ez ajax pls pakishare sa lahat, hirap mag backend
 	</p>
 	<p>
 	Implement Alert Box on landing page buttons when a subsystem has critical notifications
@@ -43,25 +43,6 @@
 
 <?php
 
-$.ajax({
-		url:'ajax.php?action=login',
-		method:'POST',
-		data:$(this).serialize(),
-		error:err=>{
-			console.log(err)
-		$('#login-form button[type="button"]').removeAttr('disabled').html('Login');
 
-			},
-			success:function(resp){
-				if(resp == 1){
-					location.href ='landing.php?page=home';
-				}else if(resp == 2){
-					location.href ='voting.php';
-				}else{
-					$('#login-form').prepend('<div class="alert alert-danger">Username or password is incorrect.</div>')
-					$('#login-form button[type="button"]').removeAttr('disabled').html('Login');
-				}
-			}
-		})
 
 ?>
