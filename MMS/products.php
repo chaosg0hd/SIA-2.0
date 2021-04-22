@@ -1,37 +1,37 @@
 <style>
 
-#div-summary{
+#div-main{
 	float:left;
 	margin-top: 20px;
 	right: auto;
 	left: 0px;	
 	background: rgba(0, 0, 0, .2);
-	width: 45%;
+	width: 75%;
 	height: 80%;		
 }
-#div-product{
+#div-items{
 	float:right;
 	margin-top: 20px;
 	right: 0px;
 	left: auto;	
 	background: rgba(0, 0, 0, .2);
-	width: 50%;
+	width: 20%;
 	height: 80%;		
 }
-.btn-product{	
+.btn-items{	
     border-style: dotted;     
-    border-radius: 20px 20px 20px 20px;
-	margin: 5px;
-	min-width: 150px;
-	height: 80px;	
-    position: relative; 	
-    font-size: 18px;	
+    border-radius: 12px 12px 12px 12px;
+	margin: 2px;
+	height: 30px;	
+    position: relative; 
+	padding: 4px;
+    font-size: 12px;	
     text-decoration: none;
     white-space: normal;
     word-wrap: break-word;    
 }
-.btn-product:hover{
-    font-size: 20px;	
+.btn-items:hover{
+    font-size: 14px;	
     text-decoration: none;
     white-space: normal;
     word-wrap: break-word; 	   
@@ -42,25 +42,33 @@
 
 <div id = "header" class="container-fluid">
 	<p>
-	TODO: Create a Decent POS pls
+	TODO: To Show Menu Item
+	<p>
+	</p>
+	TODO: To Show Product as Contents
 	</p>	
 </div>
 
-<div id ="div-summary" class ="container-fluid">
+<div id ="div-main" class ="container-fluid">
+
+	
 
 	<p>
-	PURCHASE SUMMARY GOES HERE
+	ITEM CONTENT GOES HERE
 	</p>
 
 	<p>
-	TODO: Clear, Total, Print Buttons should be here and other optionals
+	TODO: To show what a menu item contains 
 	</p>
 
-<button id = "clear" class="btn-clear">Clear All</button>
+	<div id ="div-content_field">
+
+	</div>
+
 
 </div>
 
-<div id ="div-product" class ="container-fluid">
+<div id ="div-items" class ="container-fluid">
 
 	<p>
 	TODO: Functions to organize this buttons by category
@@ -77,12 +85,10 @@
 
 		<!-- To be executed every while loop -->
 			
-			<?php echo '<button id ="btn-product-'.$row['product_id'].'" class = "btn-product">'?>		<!-- Sets a button id based on item product -->	
+			<?php echo '<button id ="btn-items-'.$row['product_id'].'" class = "btn-items" var_content = "'.$row['product_content'].'">'?>		<!-- Sets a button id based on item product -->	
 				
 				<?php echo $row['product_name']?>
-				| Price :
-				<?php echo $row['product_price']?>
-				php
+				
 			</button>
 		
 	<?php 
@@ -94,9 +100,10 @@
 
 <script>
 
-$('.btn-product').click(function() {
-    $('#div-summary').append( '<p> The script works, TODO Make this into a button with product name inside store price as a var somewhere</p>');
-	$('#div-summary').append($(this).text());
+$('.btn-items').click(function() {
+	var id = $(this).attr('var_content');
+    $('#div-content_field').append(id);
+	$('#div-content_field').append($(this).text());
 });
 	
 </script>

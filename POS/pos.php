@@ -42,7 +42,7 @@
 
 <div id = "header" class="container-fluid">
 	<p>
-	TODO: Create a Decent POS pls
+	TODO: Improve POS pls
 	</p>	
 </div>
 
