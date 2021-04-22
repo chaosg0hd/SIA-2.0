@@ -1,7 +1,13 @@
 <style>
 
+#p-content{
+	font-size: 24px !important;
+}
+#p-title{
+	font-size: 36px !important;
+}
 #div-main{
-	float:left;
+	float: left;
 	margin-top: 20px;
 	right: auto;
 	left: 0px;	
@@ -49,9 +55,7 @@
 	</p>	
 </div>
 
-<div id ="div-main" class ="container-fluid">
-
-	
+<div id ="div-main" class ="container-fluid">	
 
 	<p>
 	ITEM CONTENT GOES HERE
@@ -63,6 +67,14 @@
 
 	<div id ="div-content_field">
 
+	<p id = "p-title">
+
+	<p>
+
+
+	<p id = "p-content">
+
+	</p>
 	</div>
 
 
@@ -85,7 +97,7 @@
 
 		<!-- To be executed every while loop -->
 			
-			<?php echo '<button id ="btn-items-'.$row['product_id'].'" class = "btn-items" var_content = "'.$row['product_content'].'">'?>		<!-- Sets a button id based on item product -->	
+			<?php echo '<button id ="btn-items-'.$row['product_id'].'" class = "btn-items" var_title = "'.$row['product_name'].'" var_content = "'.$row['product_content'].'">'?>		<!-- Sets a button id based on item product -->	
 				
 				<?php echo $row['product_name']?>
 				
@@ -101,9 +113,16 @@
 <script>
 
 $('.btn-items').click(function() {
-	var id = $(this).attr('var_content');
-    $('#div-content_field').append(id);
-	$('#div-content_field').append($(this).text());
+	var title = $(this).attr('var_title');
+	document.getElementById('p-title').innerHTML = title;
+
+	var content = $(this).attr('var_content');	
+	content = content.replace(/}{/g, ' & ');
+	content = content.replace(/[{()}]/g, ' ');
+
+
+	
+	document.getElementById('p-content').innerHTML = content;
 });
 	
 </script>

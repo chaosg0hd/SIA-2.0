@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+<?php 
+session_start(); 
+session_destroy(); 
+?>
+
 <?php include 'header.php'; ?>
 
 <style>

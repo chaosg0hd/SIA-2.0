@@ -29,8 +29,9 @@
 	display: flex;
 }
 .btn {
-    height: 20vh;
+    height: 20%;
     width: 20%;
+    min-height: 140px;
     min-width: 140px;
     border-style: dotted;  
     border-color: var(--white);
@@ -128,24 +129,51 @@
 #button-FMS:hover{     
     background-size: 100px 100px !important;  
 }
+#button-adm{         
+    color: var(--white) !important;
+    background: var(--red) !important;  
+}
+#button-adm:hover{     
+    background-size: 100px 100px !important;  
+}
 </style>
 
 <body>
 
+<!-- To check if user has access to certain subsystem, This is ugly, it could be better implemented -->
 
 <div id ="container">
     <div id ="top-div">
     </div>
     <div id ="ribbon">
         <center>
-            <a href="./index.php?sys=CMS&page=home"><button id ="button-CMS" class ="btn">Customer Management</button></a>
-            <a href="./index.php?sys=POS&page=home"><button id ="button-POS" class ="btn">Point of Sale</button></a>
-            <a href="./index.php?sys=MMS&page=home"><button id ="button-MMS" class ="btn">Menu Management</button></a>
-            <a href="./index.php?sys=IMS&page=home"><button id ="button-IMS" class ="btn">Inventory Management</button></a>
-            <a href="./index.php?sys=DTR&page=home"><button id ="button-DTR" class ="btn">Daily Time Record Management</button></a>
-            <a href="./index.php?sys=PMS&page=home"><button id ="button-PMS" class ="btn">Payroll Management</button></a>
-            <a href="./index.php?sys=MAR&page=home"><button id ="button-MAR" class ="btn">Marketing Management</button></a>
-            <a href="./index.php?sys=FMS&page=home"><button id ="button-FMS" class ="btn">Finance Management System</button></a>
+            <?php if($_SESSION['Access_'] == 1 or $_SESSION['Access_'] == 0): ?>		
+                <a href="./index.php?sys=CMS&page=home"><button id ="button-CMS" class ="btn">Customer Management</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 2 or $_SESSION['Access_'] == 0): ?>
+                <a href="./index.php?sys=POS&page=home"><button id ="button-POS" class ="btn">Point of Sale</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 3 or $_SESSION['Access_'] == 0): ?>
+                <a href="./index.php?sys=MMS&page=home"><button id ="button-MMS" class ="btn">Menu Management</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 4 or $_SESSION['Access_'] == 0): ?>
+                <a href="./index.php?sys=IMS&page=home"><button id ="button-IMS" class ="btn">Inventory Management</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 5 or $_SESSION['Access_'] == 0): ?>
+                <a href="./index.php?sys=DTR&page=home"><button id ="button-DTR" class ="btn">Daily Time Record Management</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 6 or $_SESSION['Access_'] == 0): ?>
+                <a href="./index.php?sys=PMS&page=home"><button id ="button-PMS" class ="btn">Payroll Management</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 7 or $_SESSION['Access_'] == 0): ?>
+                <a href="./index.php?sys=MAR&page=home"><button id ="button-MAR" class ="btn">Marketing Management</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 8 or $_SESSION['Access_'] == 0): ?>
+                <a href="./index.php?sys=FMS&page=home"><button id ="button-FMS" class ="btn">Finance Management System</button></a>
+            <?php endif; ?>
+            <?php if($_SESSION['Access_'] == 0): ?>		
+                <a href="./index.php?sys=admin&page=home"><button id ="button-adm" class ="btn">Administrator Tools</button></a>
+            <?php endif; ?>
         </center>
     </div>
 </div>

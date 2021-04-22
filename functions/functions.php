@@ -27,8 +27,9 @@ Class Action {
 		$login = $this->db->query("SELECT * FROM users where user_name = '".$username."' and user_password = '".$password."' ");
 		if($login->num_rows > 0){
 
-			while($access = $login->fetch_assoc()){					
-					$_SESSION['Access_'] = $access['user_name'];
+			while($access = $login->fetch_assoc()){			
+					$_SESSION['Name_'] = $access['user_name'];
+					$_SESSION['Access_'] = $access['user_privilege'];
 					$_SESSION['Image_'] = $access['user_image'];
 			}				
 			return 1;

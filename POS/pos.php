@@ -6,7 +6,7 @@
 	right: auto;
 	left: 0px;	
 	background: rgba(0, 0, 0, .2);
-	width: 45%;
+	width: 38%;
 	height: 80%;		
 }
 #div-product{
@@ -15,17 +15,16 @@
 	right: 0px;
 	left: auto;	
 	background: rgba(0, 0, 0, .2);
-	width: 50%;
+	width: 60%;
 	height: 80%;		
 }
 .btn-product{	
     border-style: dotted;     
-    border-radius: 20px 20px 20px 20px;
-	margin: 5px;
-	min-width: 150px;
-	height: 80px;	
+    border-radius: 8px 8px 8px 8px;
+	margin: 2px;
+	height: 60px;	
     position: relative; 	
-    font-size: 18px;	
+    font-size: 16px;	
     text-decoration: none;
     white-space: normal;
     word-wrap: break-word;    
@@ -66,12 +65,16 @@
 	TODO: Functions to organize this buttons by category
 	</p>
 
+	<p>
+	TODO: Sort by Popularity
+	</p>
+
 	<!-- Create Squares per Product -->
 
 	<!-- SQL Query -->	
 
 	<?php
-		$tables = $conn->query("SELECT * FROM products_tb");
+		$tables = $conn->query("SELECT * FROM products_tb WHERE product_status = 'Available'");
 		while($row=$tables->fetch_assoc()):
 	?>
 

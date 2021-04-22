@@ -13,7 +13,7 @@
 
 include './conn.php'; 
 include './header.php';
-// To Refresh : might be useful 
+// To Refresh : might be useful idk
 
 //header('Refresh: 60'); ?>
 
@@ -50,14 +50,14 @@ body{
 
 <?php include 'sidebar.php' ?>
 
-<!-- IDK WHAT THIS DOES -->
+<!-- Pag ok na lahat pede na mag toast -->
 
 <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-body text-white">
     </div>
 </div>
 
-<!-- Loads Main Modal -->
+<!-- Loads Main Viewpanel -->
 
 <?php include 'viewpanel.php' ?> 
 

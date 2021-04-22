@@ -164,7 +164,7 @@
 
                     <!-- Loads user_name -->
 
-                    <p>&nbsp;  | <?php echo $_SESSION['Access_']; ?> |  &nbsp;</p>    
+                    <p>&nbsp;  | <?php echo $_SESSION['Name_']; ?> |  &nbsp;</p>    
                         
                     <a id ="icon-log-out" href="./login.php"><i class="fas fa-sign-out-alt fa-lg"></i></a>
                     
