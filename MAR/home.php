@@ -9,6 +9,9 @@
 	<p>
 	TODO: Implement JSON and XML functions to modify Website Content
 	</p>
+	<p>
+	TODO: Use actual pictures ng cocolime
+	</p>
 </div>
 
 <div class="container-fluid">

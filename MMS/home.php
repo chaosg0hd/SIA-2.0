@@ -14,6 +14,9 @@ This should be a dashboard that show important data regarding your subsystem
 <p>
 TODO: Menu Management System must show most produced Items, must be able to create items, and show its contents	
 </p>
+<p>
+TODO: Use actual pictures ng cocolime
+</p>
 </div>
 
 <script>
